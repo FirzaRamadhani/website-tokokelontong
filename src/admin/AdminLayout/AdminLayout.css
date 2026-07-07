@@ -1,0 +1,407 @@
+.admin-layout {
+  width: 100%;
+  min-height: 100dvh;
+  background: #f5f6fb;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.admin-sidebar {
+  min-height: 100dvh;
+  background: #087a32;
+  color: white;
+  padding: 28px 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 1100;
+}
+
+.admin-content {
+  min-height: 100dvh;
+  min-width: 0;
+  padding: 34px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.admin-brand-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+
+  background: #ffffff;
+  color: #087a32;
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-brand-text {
+  flex: 1;
+  min-width: 0;
+  max-width: 170px;
+}
+
+.admin-sidebar .admin-brand .admin-brand-text h2 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  line-height: 1.25 !important;
+
+  margin: 0 0 5px 0 !important;
+}
+
+.admin-sidebar .admin-brand .admin-brand-text p {
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 13px !important;
+  margin: 0 !important;
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-nav a {
+  height: 50px;
+  padding: 0 14px;
+  border-radius: 12px;
+
+  color: #e8fff0;
+  text-decoration: none;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  transition: 0.25s ease;
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+  background: #ffffff;
+  color: #087a32;
+  transform: translateX(4px);
+}
+
+.admin-logout {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.admin-logout:hover {
+  background: #ffffff;
+  color: #087a32;
+}
+
+.admin-content {
+  min-width: 0;
+  padding: 34px;
+}
+
+/* =======================
+   TOPBAR
+======================= */
+
+.admin-topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    position:relative;
+    gap:12px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: #087a32;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.admin-overlay {
+    display: none;
+}
+
+.topbar-actions{
+    position:relative;
+}
+
+.notification-btn{
+    width:48px;
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    transition:.25s;
+}
+
+.notification-btn:hover{
+    background:#f4f6fb;
+}
+
+.notification-badge{
+    position:absolute;
+
+    top:-4px;
+    right:-4px;
+
+    width:22px;
+    height:22px;
+
+    background:#ef4444;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.notification-dropdown{
+
+    position:absolute;
+
+    right:0;
+
+    top:60px;
+
+    width:360px;
+
+    background:white;
+
+    border-radius:16px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+    overflow:hidden;
+
+    z-index:999;
+}
+
+.notification-dropdown h3{
+
+    padding:18px;
+
+    border-bottom:1px solid #eee;
+
+    font-size:18px;
+}
+
+.notification-item{
+
+    padding:16px 18px;
+
+    border-bottom:1px solid #eee;
+}
+
+.notification-item:hover{
+
+    background:#f8fafc;
+}
+
+.notification-item.green{
+
+    border-left:5px solid #16a34a;
+}
+
+.notification-item.orange{
+
+    border-left:5px solid #f59e0b;
+}
+
+.notification-item.red{
+
+    border-left:5px solid #ef4444;
+}
+
+.notification-item.blue{
+
+    border-left:5px solid #2563eb;
+}
+
+.notification-item strong{
+
+    display:block;
+
+    margin-bottom:5px;
+}
+
+.notification-item p{
+
+    color:#64748b;
+
+    font-size:14px;
+}
+
+.empty-notification{
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#64748b;
+}
+
+.notification-item small{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#9ca3af;
+
+    font-size:12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .admin-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 1000;
+  }
+
+  .admin-sidebar {
+    min-height: 100dvh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: min(280px, 85vw);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .admin-content {
+    padding: 20px 16px 24px;
+  }
+
+  .admin-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-logout {
+    margin-top: 20px;
+  }
+
+  .notification-dropdown {
+    width: min(360px, calc(100vw - 24px));
+    right: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-content {
+    padding: 18px 14px 24px;
+  }
+
+  .admin-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-topbar {
+    justify-content: space-between;
+  }
+
+  .admin-brand {
+    gap: 10px;
+  }
+
+  .admin-brand-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .admin-brand-text h2 {
+    font-size: 14px !important;
+  }
+
+  .admin-brand-text p {
+    font-size: 12px !important;
+  }
+}

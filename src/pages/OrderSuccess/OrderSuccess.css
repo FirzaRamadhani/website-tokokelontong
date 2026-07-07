@@ -1,0 +1,138 @@
+.success-page {
+  min-height: 100vh;
+  background: #f5f6fb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+}
+
+.success-card {
+  width: 100%;
+  max-width: 650px;
+
+  background: white;
+  border-radius: 24px;
+
+  padding: 60px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.checkmark-circle {
+  width: 140px;
+  height: 140px;
+
+  margin: 0 auto 30px;
+
+  border-radius: 50%;
+
+  background: #087a32;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: popSuccess 0.7s ease;
+}
+
+.success-card h1 {
+  font-size: 42px;
+  color: #182230;
+  margin-bottom: 18px;
+}
+
+.success-card p {
+  color: #64748b;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.order-info {
+  background: #f8fafc;
+
+  border-radius: 12px;
+
+  padding: 18px 24px;
+
+  margin-bottom: 14px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-info span {
+  color: #64748b;
+}
+
+.order-info strong {
+  color: #087a32;
+}
+
+.success-btn {
+  margin-top: 24px;
+
+  width: 100%;
+  height: 54px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #087a32;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.success-btn:hover {
+  background: #05662d;
+}
+
+.success-info {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.success-info p {
+  margin: 8px 0;
+}
+
+.success-products {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.success-product-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.success-product-row:last-child {
+  border-bottom: none;
+}
+
+@keyframes popSuccess {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

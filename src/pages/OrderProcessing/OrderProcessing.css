@@ -1,0 +1,278 @@
+.processing-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f6fb;
+  padding: 50px 5% 90px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.processing-card {
+  width: 100%;
+  max-width: 760px;
+  background: white;
+  border: 1px solid #d8dfd8;
+  border-radius: 24px;
+  padding: 56px;
+  text-align: center;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.08);
+}
+
+.success-icon {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #087a32;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: successPop 0.7s ease;
+}
+
+.success-label {
+  display: inline-block;
+  background: #e4f4e8;
+  color: #087a32;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.processing-card h1 {
+  color: #182230;
+  font-size: 40px;
+  margin-bottom: 14px;
+}
+
+.processing-desc {
+  color: #64748b;
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0 auto 30px;
+}
+
+.order-box {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 34px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.order-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-box span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.order-box strong {
+  color: #087a32;
+  font-size: 18px;
+}
+
+.timeline {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  text-align: center;
+  padding: 0 10px;
+}   
+
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: #d8dfd8;
+  z-index: 1;
+}
+
+.timeline-item.done:not(:last-child)::after {
+  background: #087a32;
+}
+
+.timeline-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  background: #eef2f1;
+  color: #9ca3af;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-item.done .timeline-icon {
+  background: #087a32;
+  color: white;
+}
+
+.timeline-item.active .timeline-icon {
+  background: #fff7ed;
+  color: #f97316;
+  animation: pulseStep 1.6s ease-in-out infinite;
+}
+
+.timeline-item.done:not(:last-child)::after {
+  background: #087a32;
+}
+
+.timeline-content {
+  padding-top: 5px;
+}
+
+.timeline-content h3 {
+  font-size: 15px;
+  color: #182230;
+  margin-bottom: 6px;
+}
+
+.timeline-content p {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.timeline-item.pending .timeline-content h3,
+.timeline-item.pending .timeline-content p {
+  color: #9ca3af;
+}
+
+.processing-actions {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.processing-actions button {
+  height: 52px;
+  border: none;
+  border-radius: 12px;
+  background: #087a32;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  transition: 0.3s ease;
+}
+
+.processing-actions button:hover {
+  transform: translateY(-3px);
+  background: #05662d;
+}
+
+.processing-actions .outline {
+  background: white;
+  color: #087a32;
+  border: 1px solid #087a32;
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseStep {
+  0% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.35);
+  }
+
+  70% {
+    box-shadow: 0 0 0 14px rgba(249, 115, 22, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+  }
+}
+
+@media (max-width: 650px) {
+  .processing-page {
+    padding: 30px 16px 70px;
+  }
+
+  .processing-card {
+    padding: 34px 22px;
+  }
+
+  .processing-card h1 {
+    font-size: 30px;
+  }
+
+  .order-box {
+    grid-template-columns: 1fr;
+  }
+
+  .processing-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    display: block;
+    text-align: left;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+    text-align: left;
+    padding-bottom: 28px;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    left: 25px;
+    top: 52px;
+    width: 2px;
+    height: calc(100% - 52px);
+  }
+
+  .timeline-icon {
+    margin: 0;
+  }
+}
