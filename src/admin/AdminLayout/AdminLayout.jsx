@@ -144,7 +144,7 @@ function AdminLayout() {
       </aside>
 
       <section className="admin-content">
-        <div className="admin-topbar">
+        <div className={`admin-topbar ${isMobileView ? "mobile-topbar" : ""}`}>
           {isMobileView && (
             <button
               className="mobile-menu-toggle"
