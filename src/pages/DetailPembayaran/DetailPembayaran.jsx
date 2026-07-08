@@ -23,7 +23,7 @@
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState("atm");
     const [order, setOrder] = useState(null);
-    const vaNumber = "8077081234567890";
+    const vaNumber = "663901028659533";
     const { id } = useParams();
     const [timeLeft, setTimeLeft] = useState("");
     const [expired, setExpired] = useState(false);
@@ -269,7 +269,7 @@
             
             {isBank &&  (
               <div className="payment-card bank-card">
-                <h2>Virtual Account BCA</h2>
+                <h2>Virtual Account BRI</h2>
 
                 <div className="va-box">
                   <CreditCard size={22} />
@@ -305,7 +305,7 @@
                     <ol>
                         <li>Masukkan kartu ATM dan PIN Anda.</li>
                         <li>Pilih menu Transaksi Lainnya lalu Transfer.</li>
-                        <li>Pilih ke Rekening BCA Virtual Account.</li>
+                        <li>Pilih ke Rekening BRI Virtual Account.</li>
                         <li>Masukkan nomor Virtual Account yang tersedia.</li>
                         <li>Pastikan nominal pembayaran sesuai total tagihan.</li>
                         <li>Ikuti instruksi sampai transaksi berhasil.</li>
