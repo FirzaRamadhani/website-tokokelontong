@@ -164,9 +164,9 @@ function Navbar() {
           Produk
         </Link>
 
-        <a href="#kategori" onClick={closeMenu}>
+        <Link to="/#kategori" onClick={closeMenu}>
           Kategori
-        </a>
+        </Link>
 
         <Link to="/track-order" onClick={closeMenu}>
           Lacak Pesanan
